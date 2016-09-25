@@ -120,7 +120,9 @@ public class HTML{
 	}
 	
 	public static String ROW(String ... elements){
-		String[] es = Arrays.stream(elements).map((String e) -> HTML.TD(e)).toArray(HTML::allocateStringArray); 
+		String[] es = Arrays.stream(elements)
+				.map((String e) -> HTML.TD(e))
+				.toArray(HTML::allocateStringArray); 
 		return TAG("tr", es);
 	}
 	

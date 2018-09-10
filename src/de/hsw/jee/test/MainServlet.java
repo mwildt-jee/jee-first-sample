@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import de.hsw.jee.html.HTML;
 
 @WebServlet("/main")
-public class TestServlet extends HttpServlet {
+public class MainServlet extends HttpServlet {
 	
 	public static final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("dd.MM.YYYY");
 	
@@ -21,7 +21,7 @@ public class TestServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		resp.getWriter().append(HTML.HTML(
 			HTML.BODY(
-				HTML.H1("Hallo Java!"),
+				HTML.H1("Hallo Jakarta EE!"),
 				HTML.P("Heute ist der ", DATE_FORMAT.format(new Date()), "."),
 				HTML.P("Das hier ist ein sample-Projekt mit Java EE!")
 			)
